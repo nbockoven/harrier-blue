@@ -1,4 +1,4 @@
-phonecatApp.config(['$routeProvider', function( $routeProvider ){
+app.config(['$routeProvider', function( $routeProvider ){
 
   $routeProvider
 
