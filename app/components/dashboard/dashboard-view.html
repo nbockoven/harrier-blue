@@ -1,1 +1,7 @@
-<h1>Dashboard</h1>
+<h1 class="mt-0">Dashboard</h1>
+
+<ul class="list-group">
+  <li class="list-group-item" data-ng-repeat="hero in heroes track by $index">
+    {{$index + 1}}. {{hero}}
+  </li>
+</ul>

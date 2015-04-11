@@ -1,24 +1,34 @@
-app.config(['$routeProvider', function( $routeProvider ){
+harrierblue.config(['$routeProvider', function( $routeProvider ){
 
   $routeProvider
 
-    .when('/dashboard', {
-      templateUrl: 'components/dashboard-view.html',
-      controller: 'dashboard'
-    })
+  .when('/login', {
+    title:       'Login',
+    templateUrl: 'app/components/login/login-view.html',
+    controller:  'login'
+  })
 
-    .when('/search', {
-      templateUrl: 'components/search-listing-view.html',
-      controller: 'search-listing'
-    })
+  .when('/dashboard', {
+    title:       'Dashboard',
+    templateUrl: 'app/components/dashboard/dashboard-view.html',
+    controller:  'dashboard'
+  })
 
-    .when('/search/:Id', {
-      templateUrl: 'components/search-detail-view.html',
-      controller: 'search-detail'
-    })
+  .when('/search', {
+    title:       'Search',
+    templateUrl: 'app/components/search/search-view.html',
+    controller:  'search'
+  })
 
-    .otherwise({
-      redirectTo: '/dashboard'
-    });
+  .when('/', {
+      title: 'Login',
+      templateUrl: 'app/components/login/login-view.html',
+      controller:  'login',
+      role: '0'
+  })
+
+  .otherwise({
+    redirectTo: '/login'
+  });
 
 }]);
