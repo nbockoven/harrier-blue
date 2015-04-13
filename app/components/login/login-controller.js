@@ -1,3 +1,23 @@
-harrierblue.controller('login', ['$scope', '$log', function( $scope, $log ){
-  $scope.heroes = ['Superman', 'Batman', 'Wonder Woman', 'The Flash', 'Green Lantern'];
+harrierblue.controller('login', ['$scope', function( $scope ){
+  $scope.credentials = {
+    email:    '',
+    password: ''
+  };
 }]);
+
+
+
+/*harrierblue.controller('login', ['$scope', '$rootScope', 'AUTH_EVENTS', 'AuthService', function( $scope, $rootScope, AUTH_EVENTS, AuthService ){
+  $scope.credentials = {
+    email:    '',
+    password: ''
+  };
+  $scope.login = function( credentials ){
+    AuthService.login( credentials ).then( function( user ){
+      $rootScope.$broadcast( AUTH_EVENTS.loginSuccess );
+      $scope.setCurrentUser( user );
+    }, function () {
+      $rootScope.$broadcast( AUTH_EVENTS.loginFailed );
+    });
+  };
+}]);*/

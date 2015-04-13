@@ -1,5 +1,17 @@
 body {
   background-color: #f2f2f2;
+  padding-bottom: 40px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 40px;
+}
+
+/*btn / buttons*/
+.btn-link {
+  text-transform: none;
 }
 
 /*navbar*/
@@ -10,8 +22,7 @@ body {
   font-size: 16px;
 }
 
-/*material design*/
-md-card {
-  background-color: white;
-  padding: 20px;
+/*panel*/
+.panel-heading, .panel-body, .panel-footer {
+  padding: 30px;
 }

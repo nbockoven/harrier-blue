@@ -1,34 +1,66 @@
-harrierblue.config(['$routeProvider', function( $routeProvider ){
+harrierblue.config(function($stateProvider, $urlRouterProvider) {
+  //
+  // For any unmatched url, redirect to /state1
+  $urlRouterProvider.otherwise("/login");
+  //
+  // Now set up the states
+  $stateProvider
 
-  $routeProvider
-
-  .when('/login', {
-    title:       'Login',
-    templateUrl: 'app/components/login/login-view.html',
-    controller:  'login'
+  .state('dashboard', {
+    url: "/dashboard",
+    controller: 'dashboard',
+    templateUrl: "app/components/dashboard/dashboard-view.html",
+    data: {
+      pagetitle: 'Dashboard',
+      requireLogin: true
+    }
   })
 
-  .when('/dashboard', {
-    title:       'Dashboard',
-    templateUrl: 'app/components/dashboard/dashboard-view.html',
-    controller:  'dashboard'
+  .state('login', {
+    url: "/login",
+    controller: 'login',
+    templateUrl: "app/components/login/login-view.html",
+    data: {
+      pagetitle: 'Login'
+    }
   })
 
-  .when('/search', {
-    title:       'Search',
-    templateUrl: 'app/components/search/search-view.html',
-    controller:  'search'
+  .state('logout', {
+    url: "/logout",
+    controller: 'logout',
+    templateUrl: "app/components/logout/logout-view.html",
+    data: {
+      pagetitle: 'Logout',
+      requireLogin: true
+    }
   })
 
-  .when('/', {
-      title: 'Login',
-      templateUrl: 'app/components/login/login-view.html',
-      controller:  'login',
-      role: '0'
+  .state('search', {
+    url: "/search",
+    templateUrl: "app/components/search/search-view.html",
+    data: {
+      pagetitle: 'Search',
+      requireLogin: true
+    }
   })
 
-  .otherwise({
-    redirectTo: '/login'
-  });
+  .state('settings', {
+    url: "/settings",
+    templateUrl: "app/components/settings/settings-view.html",
+    data: {
+      pagetitle: 'Settings',
+      requireLogin: true
+    }
+  })
 
-}]);
+  .state('', {
+    url: "/",
+    controller: "splash",
+    templateUrl: "app/components/splash/splash-view.html",
+    data: {
+      pagetitle: 'Welcome'
+    }
+  })
+
+  ;
+});
