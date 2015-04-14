@@ -1,6 +1,6 @@
 body {
-  background-color: #f2f2f2;
-  padding-bottom: 40px;
+  background-color: #eee;
+  padding-bottom: 50px;
 }
 
 footer {
@@ -12,6 +12,9 @@ footer {
 /*btn / buttons*/
 .btn-link {
   text-transform: none;
+}
+.btn-link:hover, .btn-link:focus, .btn-link:active {
+  text-decoration: underline;
 }
 
 /*navbar*/
@@ -25,4 +28,8 @@ footer {
 /*panel*/
 .panel-heading, .panel-body, .panel-footer {
   padding: 30px;
+}
+
+.ng-hide {
+  display: none !important;
 }

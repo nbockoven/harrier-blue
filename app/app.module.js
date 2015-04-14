@@ -5,10 +5,18 @@ harrierblue.run(['$rootScope', '$state', '$stateParams', function ($rootScope, $
   $rootScope.$on('$stateChangeStart', function (event, toState, toParams) {
     var requireLogin = toState.data.requireLogin;
 
-    if (requireLogin && typeof $rootScope.currentUser === 'undefined') {
+    if( requireLogin && typeof $rootScope.currentUser === 'undefined' ){
+      // login required
+      // forward to login page
       event.preventDefault();
-      $state.go("login")
-      // get me a login modal!
+      $state.previousState = toState.name;
+      $state.go("login");
+    }
+    else if( $state.previousState && $state.previousState.length ){
+      // previous tried to view a page with login required,
+      // and was redirected to sign in
+      $state.go( $state.previousState );
+      delete $state.previousState;
     }
   });
 

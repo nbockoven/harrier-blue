@@ -17,9 +17,12 @@
 
     <? include 'app/shared/header/navigation-view.html' ?>
 
-    <div class="mt-15 container-fluid" data-ui-view><i class="fa fa-spinner fa-spin h1"></i></div>
+    <div class="pt-15 container-fluid" data-ui-view><i class="fa fa-spinner fa-spin h1"></i></div>
 
     <? include 'app/shared/footer/footer-view.html' ?>
+
+    <!-- COMMON MODAL -->
+    <? include 'app/shared/modals/common.html' ?>
 
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -34,8 +37,9 @@
     <!-- CONTROLLERS -->
     <script src="app/components/dashboard/dashboard-controller.js"></script>
     <script src="app/components/login/login-controller.js"></script>
+    <script src="app/components/login/login-service.js"></script>
     <script src="app/components/search/search-controller.js"></script>
-    <script src="app/components/splash/splash-controller.js"></script>
+    <script src="app/components/welcome/welcome-controller.js"></script>
     <!-- ROUTER -->
     <script src="app/app.routes.js"></script>
 

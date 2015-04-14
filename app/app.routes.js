@@ -1,10 +1,40 @@
 harrierblue.config(function($stateProvider, $urlRouterProvider) {
   //
   // For any unmatched url, redirect to /state1
-  $urlRouterProvider.otherwise("/login");
+  $urlRouterProvider.otherwise("/404");
   //
   // Now set up the states
   $stateProvider
+
+  .state('404', {
+    url: "/404",
+    templateUrl: "app/components/404/404-view.html",
+    data: {
+      pagetitle: 'Page Note Found'
+    }
+  })
+
+  .state('contact', {
+    url: "/contacts",
+    controller: 'contact',
+    templateUrl: "app/components/contact/contact-listing-view.html",
+    data: {
+      pagetitle: 'Contacts',
+      requireLogin: true
+    }
+  })
+
+  .state('contact-detail', {
+    url: "/contact/:contactID",
+    templateUrl: "app/components/contact/contact-detail-view.html",
+    data: {
+      pagetitle: 'Contact'
+    },
+    controller: function( $scope, $stateParams ){
+      // get the id
+      $scope.id = $stateParams.contactID;
+    }
+  })
 
   .state('dashboard', {
     url: "/dashboard",
@@ -35,6 +65,15 @@ harrierblue.config(function($stateProvider, $urlRouterProvider) {
     }
   })
 
+  .state('modal', {
+    abstract: true,
+    views: {
+      'modal': {
+        templateUrl: 'app/shared/modals/common.html'
+      }
+    }
+  })
+
   .state('search', {
     url: "/search",
     templateUrl: "app/components/search/search-view.html",
@@ -53,10 +92,10 @@ harrierblue.config(function($stateProvider, $urlRouterProvider) {
     }
   })
 
-  .state('', {
-    url: "/",
-    controller: "splash",
-    templateUrl: "app/components/splash/splash-view.html",
+  .state('welcome', {
+    url: "/welcome",
+    controller: "welcome",
+    templateUrl: "app/components/welcome/welcome-view.html",
     data: {
       pagetitle: 'Welcome'
     }
