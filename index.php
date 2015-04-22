@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" data-ng-app="harrierblue">
+<html lang="en-us" data-ng-app="harrierblue" class="bg-gray">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,13 +13,13 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
   </head>
-  <body>
+  <body class="bg-gray">
 
     <? include 'app/shared/header/navigation-view.html' ?>
 
     <div class="pt-15 container-fluid" data-ui-view><i class="fa fa-spinner fa-spin h1"></i></div>
 
-    <? include 'app/shared/footer/footer-view.html' ?>
+    <? // include 'app/shared/footer/view.html' ?>
 
     <!-- COMMON MODAL -->
     <? include 'app/shared/modals/common.html' ?>
@@ -35,11 +35,14 @@
     <!-- APP -->
     <script src="app/app.module.js"></script>
     <!-- CONTROLLERS -->
-    <script src="app/components/dashboard/dashboard-controller.js"></script>
-    <script src="app/components/login/login-controller.js"></script>
-    <script src="app/components/login/login-service.js"></script>
-    <script src="app/components/search/search-controller.js"></script>
-    <script src="app/components/welcome/welcome-controller.js"></script>
+    <script src="app/components/dashboard/controller.js"></script>
+    <script src="app/components/favorite/service.js"></script>
+    <script src="app/components/login/controller.js"></script>
+    <script src="app/components/login/service.js"></script>
+    <script src="app/components/saved-search/service.js"></script>
+    <script src="app/components/search/controller.js"></script>
+    <script src="app/components/search/service.js"></script>
+    <script src="app/components/welcome/controller.js"></script>
     <!-- ROUTER -->
     <script src="app/app.routes.js"></script>
 

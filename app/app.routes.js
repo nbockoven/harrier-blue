@@ -1,14 +1,14 @@
 harrierblue.config(function($stateProvider, $urlRouterProvider) {
   //
   // For any unmatched url, redirect to /state1
-  $urlRouterProvider.otherwise("/404");
+  $urlRouterProvider.otherwise("/");
   //
   // Now set up the states
   $stateProvider
 
   .state('404', {
     url: "/404",
-    templateUrl: "app/components/404/404-view.html",
+    templateUrl: "app/components/404/view.html",
     data: {
       pagetitle: 'Page Note Found'
     }
@@ -17,7 +17,7 @@ harrierblue.config(function($stateProvider, $urlRouterProvider) {
   .state('contact', {
     url: "/contacts",
     controller: 'contact',
-    templateUrl: "app/components/contact/contact-listing-view.html",
+    templateUrl: "app/components/contact/listing-view.html",
     data: {
       pagetitle: 'Contacts',
       requireLogin: true
@@ -26,7 +26,7 @@ harrierblue.config(function($stateProvider, $urlRouterProvider) {
 
   .state('contact-detail', {
     url: "/contact/:contactID",
-    templateUrl: "app/components/contact/contact-detail-view.html",
+    templateUrl: "app/components/contact/detail-view.html",
     data: {
       pagetitle: 'Contact'
     },
@@ -39,17 +39,17 @@ harrierblue.config(function($stateProvider, $urlRouterProvider) {
   .state('dashboard', {
     url: "/dashboard",
     controller: 'dashboard',
-    templateUrl: "app/components/dashboard/dashboard-view.html",
+    templateUrl: "app/components/dashboard/view.html",
     data: {
       pagetitle: 'Dashboard',
-      requireLogin: true
+      // requireLogin: true
     }
   })
 
   .state('login', {
     url: "/login",
     controller: 'login',
-    templateUrl: "app/components/login/login-view.html",
+    templateUrl: "app/components/login/view.html",
     data: {
       pagetitle: 'Login'
     }
@@ -58,7 +58,7 @@ harrierblue.config(function($stateProvider, $urlRouterProvider) {
   .state('logout', {
     url: "/logout",
     controller: 'logout',
-    templateUrl: "app/components/logout/logout-view.html",
+    templateUrl: "app/components/logout/view.html",
     data: {
       pagetitle: 'Logout',
       requireLogin: true
@@ -76,26 +76,36 @@ harrierblue.config(function($stateProvider, $urlRouterProvider) {
 
   .state('search', {
     url: "/search",
-    templateUrl: "app/components/search/search-view.html",
+    controller: 'search',
+    templateUrl: "app/components/search/view.html",
     data: {
       pagetitle: 'Search',
-      requireLogin: true
+      // requireLogin: true
     }
   })
 
   .state('settings', {
     url: "/settings",
-    templateUrl: "app/components/settings/settings-view.html",
+    templateUrl: "app/components/settings/view.html",
     data: {
       pagetitle: 'Settings',
       requireLogin: true
     }
   })
 
+  .state('support', {
+    url: "/support",
+    templateUrl: "app/components/support/view.html",
+    data: {
+      pagetitle: 'Support',
+      // requireLogin: true
+    }
+  })
+
   .state('welcome', {
-    url: "/welcome",
+    url: "/",
     controller: "welcome",
-    templateUrl: "app/components/welcome/welcome-view.html",
+    templateUrl: "app/components/welcome/view.html",
     data: {
       pagetitle: 'Welcome'
     }

@@ -1,13 +1,17 @@
 body {
-  background-color: #eee;
-  padding-bottom: 50px;
+  /*padding-bottom: 50px;*/
 }
 
-footer {
+.bg-gray, .bg-grey {
+  background-color: #eee;
+}
+
+/* footer {
   position: fixed;
   bottom: 0;
   height: 40px;
-}
+  width: 100%;
+} */
 
 /*btn / buttons*/
 .btn-link {
@@ -26,9 +30,22 @@ footer {
 }
 
 /*panel*/
-.panel-heading, .panel-body, .panel-footer {
-  padding: 30px;
+.panel .table-responsive>.table tr th:first-child, .panel>.table-responsive>.table tr td:first-child {
+  padding-left: 15px;
 }
+.panel .table-responsive>.table tr th:last-child, .panel>.table-responsive>.table tr td:last-child {
+  padding-right: 15px;
+}
+
+/*media*/
+.media strong {
+  font-weight: 300;
+}
+
+thead>tr>th {
+  letter-spacing: 1.7px;
+}
+
 
 .ng-hide {
   display: none !important;
