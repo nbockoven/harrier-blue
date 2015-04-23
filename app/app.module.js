@@ -1,6 +1,6 @@
-var harrierblue = angular.module('harrierblue', ['ui.router']);
+var harrierblue = angular.module('harrierblue', ['ui.router', 'ngSanitize']);
 
-harrierblue.run(['$rootScope', '$state', '$stateParams', function ($rootScope, $state, $stateParams){
+harrierblue.run(['$rootScope', '$state', '$stateParams', function( $rootScope, $state, $stateParams ){
 
   $rootScope.$on('$stateChangeStart', function (event, toState, toParams) {
     var requireLogin = toState.data.requireLogin;

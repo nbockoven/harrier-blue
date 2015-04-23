@@ -1,0 +1,71 @@
+<div class="row">
+  <div class="col-sm-8">
+    <div class="panel panel-default">
+      <div class="panel-body p-30">
+        <div class="row">
+          <div class="col-md-6">
+            <h1 class="mt-0">
+              {{ contact.first_name }} {{ contact.last_name }} <i class="fa fa-star-o fa-fw text-warning"></i>
+              <span data-ng-repeat="role in contact.roles">
+                <br>
+                <small class="text-muted">{{ role.role_title }}, <a href="{{ role.org_id }}">{{ role.org_title }}</a></small>
+              </span>
+            </h1>
+          </div><!-- .col-md-6 -->
+          <div class="col-sm-6">
+            <div class="well well-sm">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="media" data-ng-show="contact.address">
+                    <div class="media-left"><i class="fa fa-home fa-fw"></i></div>
+                    <div class="media-body">
+                      {{ contact.address }}
+                      <br data-ng-show="contact.address2">
+                      {{ contact.address2 }}
+                      <br>
+                      {{ contact.city }}, {{ contact.state }} {{ contact.zip }}
+                    </div><!-- .media-body -->
+                  </div><!-- .media -->
+                </div><!-- .col-md-6 -->
+                <div class="col-md-6">
+                  <div class="media" data-ng-show="contact.email">
+                    <div class="media-left"><i class="fa fa-envelope-o fa-fw"></i></div>
+                    <div class="media-body">{{ contact.email }}</div><!-- .media-body -->
+                  </div><!-- .media -->
+                  <div class="media mt-0" data-ng-show="contact.phone">
+                    <div class="media-left"><i class="fa fa-phone fa-fw"></i></div>
+                    <div class="media-body">{{ contact.phone }}</div><!-- .media-body -->
+                  </div><!-- .media -->
+                  <div class="media mt-0" data-ng-show="contact.fax">
+                    <div class="media-left"><i class="fa fa-fax fa-fw"></i></div>
+                    <div class="media-body">{{ contact.fax }}</div><!-- .media-body -->
+                  </div><!-- .media -->
+                </div><!-- .col-md-6 -->
+              </div><!-- .row -->
+            </div><!-- .well -->
+          </div><!-- .col-md-6 -->
+        </div><!-- .row -->
+        <div class="row">
+          <div class="col-xs-12" data-ng-bind-html="contact.biography">{{ contact.biography }}</div><!-- .col-md-12 -->
+        </div><!-- .row -->
+      </div><!-- .panel-body -->
+    </div><!-- .panel -->
+  </div><!-- .col-sm-8 -->
+  <div class="col-sm-4">
+    <div class="panel panel-default">
+      <div class="panel-body p-30">
+        <h2 class="mt-0"><i class="fa fa-twitter fa-fw"></i> Twitter Feed</h2>
+      </div><!-- .panel-body -->
+    </div><!-- .panel -->
+    <div class="panel panel-default">
+      <div class="panel-body p-30">
+        <h2 class="mt-0"><i class="fa fa-bullhorn fa-fw"></i> Market Alerts</h2>
+      </div><!-- .panel-body -->
+    </div><!-- .panel -->
+    <div class="panel panel-default">
+      <div class="panel-body p-30">
+        <h2 class="mt-0"><i class="fa fa-newspaper-o fa-fw"></i> News</h2>
+      </div><!-- .panel-body -->
+    </div><!-- .panel -->
+  </div><!-- .col-sm-4 -->
+</div><!-- .row -->

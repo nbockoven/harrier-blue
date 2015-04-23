@@ -47,11 +47,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
     <!-- // <script src="https://code.angularjs.org/1.3.0-rc.5/angular-route.min.js"></script> -->
     <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
+    <script src="https://code.angularjs.org/1.0.6/angular-sanitize.js"></script>
     <!-- APP -->
     <script src="app/app.module.js"></script>
+
     <!-- CONTROLLERS -->
-    <script src="app/components/contact/controller.js"></script>
     <script src="app/components/contact/service.js"></script>
+    <script src="app/components/contact/controller.js"></script>
+
     <script src="app/components/dashboard/controller.js"></script>
     <script src="app/components/favorite/service.js"></script>
     <script src="app/components/login/controller.js"></script>
@@ -60,8 +63,11 @@
     <script src="app/components/search/controller.js"></script>
     <script src="app/components/search/service.js"></script>
     <script src="app/components/welcome/controller.js"></script>
+
+
     <!-- ROUTER -->
     <script src="app/app.routes.js"></script>
+
 
     <!-- CUSTOM -->
     <script src="assets/js/magic.js"></script>

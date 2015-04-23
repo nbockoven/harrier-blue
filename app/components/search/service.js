@@ -1,10 +1,12 @@
-harrierblue.factory('searchService', ['$http', function( $http ){
+harrierblue.factory('searchService', ['$http', '$q', function( $http, $q ){
   return {
-    result: function( criteria, scope ){
+    getBids: function( criteria ){
+      var deferred = $q.defer();
       var $promise = $http.post('app/components/search/data.php', criteria); // send data to server
-      $promise.then(function( msg ){
-        scope.results = msg.data;
+      $promise.then(function( output ){
+        deferred.resolve( {results: output.data} );
       });
+      return deferred.promise;
     }
   }
 }]);

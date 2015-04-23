@@ -15,27 +15,31 @@ harrierblue.config(function($stateProvider, $urlRouterProvider) {
   })
 
   .state('contact', {
+    abstract: true,
     url: "/contact",
-    // controller: 'contact',
-    templateUrl: "app/components/contact/view.html",
+    templateUrl: "app/components/contact/view.listing.html",
     data: {
-      pagetitle: 'Contacts',
+      // pagetitle: 'Contacts',
       // requireLogin: true
     }
   })
 
   .state('contact.detail', {
-    url: "/:contactID",
+    url: "/{contactID:int}",
     data: {
       pagetitle: 'Contact'
     },
     resolve: {
       contactInfo: ['$stateParams', 'contactService', function( $stateParams, contactService ){
-        return contactService.getByID( $stateParams.contactID ).$promise;
+        return contactService.getByID( $stateParams.contactID );
       }]
     },
-    templateUrl: "app/components/contact/view.html",
+    templateUrl: "app/components/contact/view.detail.html",
     controller: 'contact'
+  })
+
+  .state('contact.preview', {
+    templateUrl: "app/components/contact/view.preview.html"
   })
 
   .state('dashboard', {
@@ -83,6 +87,14 @@ harrierblue.config(function($stateProvider, $urlRouterProvider) {
     data: {
       pagetitle: 'Search',
       // requireLogin: true
+    },
+    resolve: {
+      bids: ['searchService', function( searchService ){
+        return searchService.getBids( {} );
+      }],
+      // orgs: ['searchService', function( searchService ){
+      //   return searchService.getOrgs( {} );
+      // }]
     }
   })
 
