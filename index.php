@@ -15,9 +15,24 @@
   </head>
   <body class="bg-gray">
 
-    <? include 'app/shared/header/navigation-view.html' ?>
+    <? include 'app/shared/header/view.html' ?>
 
-    <div class="pt-15 container-fluid" data-ui-view><i class="fa fa-spinner fa-spin h1"></i></div>
+    <div class="pt-15 container-fluid" data-ui-view>
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <div class="panel panel-default">
+            <div class="panel-body p-30">
+              <h1 class="mt-0">loading...</h1>
+              <div class="progress">
+                <div class="progress-bar progress-bar-info progress-bar-striped active mb-0" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100" style="width:98%">
+                  98% complete
+                </div><!-- .progress-bar -->
+              </div><!-- .progress -->
+            </div><!-- .panel-body -->
+          </div><!-- .panel -->
+        </div><!-- .col-sm-6 -->
+      </div><!-- .row -->
+    </div><!-- .container-fluid (uiView) -->
 
     <? // include 'app/shared/footer/view.html' ?>
 
@@ -35,6 +50,8 @@
     <!-- APP -->
     <script src="app/app.module.js"></script>
     <!-- CONTROLLERS -->
+    <script src="app/components/contact/controller.js"></script>
+    <script src="app/components/contact/service.js"></script>
     <script src="app/components/dashboard/controller.js"></script>
     <script src="app/components/favorite/service.js"></script>
     <script src="app/components/login/controller.js"></script>

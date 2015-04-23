@@ -1,8 +1,8 @@
 harrierblue.config(function($stateProvider, $urlRouterProvider) {
-  //
+
   // For any unmatched url, redirect to /state1
   $urlRouterProvider.otherwise("/");
-  //
+
   // Now set up the states
   $stateProvider
 
@@ -15,25 +15,27 @@ harrierblue.config(function($stateProvider, $urlRouterProvider) {
   })
 
   .state('contact', {
-    url: "/contacts",
-    controller: 'contact',
-    templateUrl: "app/components/contact/listing-view.html",
+    url: "/contact",
+    // controller: 'contact',
+    templateUrl: "app/components/contact/view.html",
     data: {
       pagetitle: 'Contacts',
-      requireLogin: true
+      // requireLogin: true
     }
   })
 
-  .state('contact-detail', {
-    url: "/contact/:contactID",
-    templateUrl: "app/components/contact/detail-view.html",
+  .state('contact.detail', {
+    url: "/:contactID",
     data: {
       pagetitle: 'Contact'
     },
-    controller: function( $scope, $stateParams ){
-      // get the id
-      $scope.id = $stateParams.contactID;
-    }
+    resolve: {
+      contactInfo: ['$stateParams', 'contactService', function( $stateParams, contactService ){
+        return contactService.getByID( $stateParams.contactID ).$promise;
+      }]
+    },
+    templateUrl: "app/components/contact/view.html",
+    controller: 'contact'
   })
 
   .state('dashboard', {
@@ -95,7 +97,7 @@ harrierblue.config(function($stateProvider, $urlRouterProvider) {
 
   .state('support', {
     url: "/support",
-    templateUrl: "app/components/support/view.html",
+    templateUrl: "app/components/support/view.php",
     data: {
       pagetitle: 'Support',
       // requireLogin: true

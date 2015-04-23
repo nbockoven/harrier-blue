@@ -37,6 +37,12 @@ body {
   padding-right: 15px;
 }
 
+/*progress*/
+.progress {
+  border-radius: 3px;
+  min-height: 21px;
+}
+
 /*media*/
 .media strong {
   font-weight: 300;
