@@ -1,16 +1,16 @@
 harrierblue.config(function($stateProvider, $urlRouterProvider) {
 
   // For any unmatched url, redirect to /state1
-  $urlRouterProvider.otherwise("/");
+  $urlRouterProvider.otherwise("/lost");
 
   // Now set up the states
   $stateProvider
 
-  .state('404', {
-    url: "/404",
-    templateUrl: "app/components/404/view.html",
+  .state('lost', {
+    url: "/lost",
+    templateUrl: "app/components/lost/view.html",
     data: {
-      pagetitle: 'Page Note Found'
+      pagetitle: 'Page Not Found'
     }
   })
 

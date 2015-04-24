@@ -20,6 +20,11 @@ harrierblue.run(['$rootScope', '$state', '$stateParams', function( $rootScope, $
     }
   });
 
+  $rootScope.$on('$stateNotFound', function (event, toState, toParams) {
+    event.preventDefault();
+    $state.go("lost");
+  });
+
   $rootScope.$state = $state;
   $rootScope.$stateParams = $stateParams;
 }]);
