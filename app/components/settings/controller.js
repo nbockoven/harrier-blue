@@ -1,3 +1,3 @@
-harrierblue.controller('settings', ['$scope', '$log', function( $scope, $log ){
+harrierblue.controller('settings', ['$scope', function( $scope ){
 
 }]);

@@ -2,19 +2,7 @@
   <div class="col-sm-6 col-sm-offset-3">
     <div class="panel panel-default">
       <form class="panel-body p-30" name="formLogin" data-ng-submit="login(credentials)" novalidate>
-        <div class="row">
-          <div class="col-sm-6">
-            <h1 class="mt-0">login</h1>
-          </div><!-- .col-sm-6 -->
-          <div class="col-sm-6 text-right">
-            <div class="alert alert-dismissible pull-right mb-5 {{ alert.classes }}" role="alert">
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-              {{ alert.msg }}
-            </div><!-- .alert -->
-          </div><!-- .col-sm-6 -->
-        </div><!-- .row -->
+        <h1 class="mt-0"><i class="fa fa-sign-in fa-fw"></i> login</h1>
         <div class="row">
           <div class="col-md-6">
             <div class="form-group" data-ng-class="{'has-error has-feedback': formLogin.email.$error.email}">

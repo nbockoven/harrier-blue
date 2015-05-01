@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title data-ng-bind="$state.current.data.pagetitle + ' | Harrier Blue'">Harrier Blue</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.2/paper/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.4/paper/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css">
     <link rel="stylesheet" href="assets/css/core-layout.css">
@@ -42,7 +42,7 @@
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <!-- Bootstrap JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <!-- AngularJS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
     <!-- // <script src="https://code.angularjs.org/1.3.0-rc.5/angular-route.min.js"></script> -->
@@ -54,7 +54,6 @@
     <!-- CONTROLLERS -->
     <script src="app/components/contact/service.js"></script>
     <script src="app/components/contact/controller.js"></script>
-
     <script src="app/components/dashboard/controller.js"></script>
     <script src="app/components/favorite/service.js"></script>
     <script src="app/components/login/controller.js"></script>
@@ -62,6 +61,7 @@
     <script src="app/components/saved-search/service.js"></script>
     <script src="app/components/search/controller.js"></script>
     <script src="app/components/search/service.js"></script>
+    <script src="app/components/settings/controller.js"></script>
     <script src="app/components/welcome/controller.js"></script>
 
 

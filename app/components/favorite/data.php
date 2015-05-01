@@ -20,7 +20,7 @@
 
   $foo = [];
   while( $row = $results->fetch_assoc() )
-    $foo[] = $row;
+    $foo[ $row['item_table'] ][] = $row;
 
   echo json_encode( $foo );
 

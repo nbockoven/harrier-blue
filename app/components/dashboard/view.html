@@ -1,35 +1,95 @@
 <div class="row">
   <div class="col-sm-12 col-lg-6">
-    <div class="panel panel-default">
+    <div class="panel">
       <div class="panel-body p-30">
-        <h2 class="mt-0">saved searches</h2>
-        <ul class="list-unstyled mb-0">
-          <li data-ng-repeat="search in savedSearches">
-            <a href="{{ search.uri }}">{{ search.title }}</a>
-          </li>
-        </ul>
+        <h2 class="m-0"><i class="fa fa-search fa-fw"></i> saved searches</h2>
       </div><!-- .panel-body -->
+      <ul class="list-group">
+        <li class="list-group-item pl-30 pr-30" data-ng-repeat="search in savedSearches">
+          <div class="row">
+            <div class="col-xs-10">
+              <a href="{{ search.uri }}">{{ search.title }}</a>
+            </div><!-- .col-xs-10 -->
+            <div class="col-xs-2 text-right">
+              <a href="javascript:void(0)" class="fa fa-trash fa-fw text-danger"></a>
+            </div><!-- .col-xs-2 -->
+          </div><!-- .row -->
+        </li>
+      </ul><!-- .list-group -->
     </div><!-- .panel -->
-  </div>
+  </div><!-- .col-sm-12 -->
   <div class="col-sm-12 col-lg-6">
-    <div class="panel panel-default">
+    <div class="panel">
       <div class="panel-body p-30">
-        <h2 class="mt-0">market alerts</h2>
+        <h2 class="m-0"><i class="fa fa-bullhorn fa-fw"></i> market alerts</h2>
       </div><!-- .panel-body -->
+      <div class="list-group">
+        <a class="list-group-item pl-30 pr-30" href="javascript:void(0)">
+          <h3 class="m-0">Market alert heading</h3>
+          info | info | info
+        </a>
+      </div><!-- .list-group -->
     </div><!-- .panel -->
   </div><!-- .col-sm-12 -->
 </div><!-- .row -->
 
+<!-- favorites -->
 <div class="row">
   <div class="col-sm-12">
     <div class="panel panel-default">
       <div class="panel-body p-30">
-        <h2 class="mt-0">favorites</h2>
-        <ul class="list-unstyled mb-0">
-          <li data-ng-repeat="favorite in favorites">
-            <a href="{{ favorite.item_id }}">{{ favorite.item_table }}</a>
-          </li>
-        </ul>
+        <h2 class="mt-0"><i class="fa fa-star fa-fw"></i> favorites</h2>
+        <div class="row">
+
+          <!-- opportunities -->
+          <div class="panel panel-info" data-ng-show="favorites.bids">
+            <div class="panel-heading">
+              <h3 class="panel-title m-0">opportunities</h3>
+            </div><!-- .panel-heading -->
+            <ul class="list-group">
+              <li class="list-group-item" data-ng-repeat="favorite in favorites.bids">
+                <i class="fa fa-star fa-fw text-warning"></i> <a href="javascript:void(0)">{{ favorite.item_table }}</a>
+              </li>
+            </ul><!-- .list-group -->
+          </div><!-- .panel -->
+
+          <!-- jurisdictions -->
+          <div class="panel panel-info" data-ng-show="favorites.orgs">
+            <div class="panel-heading">
+              <h3 class="panel-title m-0">jurisdictions</h3>
+            </div><!-- .panel-heading -->
+            <ul class="list-group">
+              <li class="list-group-item" data-ng-repeat="favorite in favorites.orgs">
+                <i class="fa fa-star fa-fw text-warning"></i> <a href="javascript:void(0)">{{ favorite.item_table }}</a>
+              </li>
+            </ul><!-- .list-group -->
+          </div><!-- .panel -->
+
+          <!-- contacts -->
+          <div class="panel panel-info" data-ng-show="favorites.contacts">
+            <div class="panel-heading">
+              <h3 class="panel-title m-0">contacts</h3>
+            </div><!-- .panel-heading -->
+            <ul class="list-group">
+              <li class="list-group-item" data-ng-repeat="favorite in favorites.contacts">
+                <i class="fa fa-star fa-fw text-warning"></i> <a href="javascript:void(0)">{{ favorite.item_table }}</a>
+              </li>
+            </ul><!-- .list-group -->
+          </div><!-- .panel -->
+
+          <!-- documents -->
+          <div class="panel panel-info" data-ng-show="favorites.documents">
+            <div class="panel-heading">
+              <h3 class="panel-title m-0">documents</h3>
+            </div><!-- .panel-heading -->
+            <ul class="list-group">
+              <li class="list-group-item" data-ng-repeat="favorite in favorites.documents">
+                <i class="fa fa-star fa-fw text-warning"></i> <a href="javascript:void(0)">{{ favorite.item_table }}</a>
+              </li>
+            </ul><!-- .list-group -->
+          </div><!-- .panel -->
+
+        </div><!-- .row -->
       </div><!-- .panel-body -->
     </div><!-- .panel -->
   </div><!-- .col-sm-12 -->
