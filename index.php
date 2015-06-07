@@ -69,7 +69,12 @@
     <script src="app/app.routes.js"></script>
 
 
+    <!-- ALGOLIA SEARCH -->
+    <script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script><!-- for algolia search -->
+    <script src="//cdn.jsdelivr.net/algoliasearch.helper/2.0.0/algoliasearch.helper.min.js"></script><!-- for algolia search -->
+    <script src="//cdn.jsdelivr.net/hogan.js/3.0.0/hogan.common.js"></script><!-- for javascript templating -->
     <!-- CUSTOM -->
-    <script src="assets/js/magic.js"></script>
+    <script src="app/components/search/algolia.js"></script><!-- for algolia search -->
+    <script src="assets/js/magic.js"></script><!-- custom functions -->
   </body>
 </html>

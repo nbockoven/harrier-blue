@@ -21,6 +21,22 @@ body {
   text-decoration: underline;
 }
 
+/*checkbox & radio*/
+input[type=checkbox]:checked:after {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+}
+
+/*radio*/
+input[type=radio]:checked:before {
+  background-color: #4caf50 !important;
+}
+input[type=radio]:checked:after {
+  border-color: #4caf50 !important;
+}
+
+
+
 /*navbar*/
 .navbar {
   border-radius: 0;
@@ -55,4 +71,45 @@ thead>tr>th {
 
 .ng-hide {
   display: none !important;
+}
+
+
+/*social*/
+.facebook {
+  background-color: #3B5998;
+}
+
+.google-plus {
+  background-color: #dd4b39;
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+
+.twitter {
+  background-color: #55acee;
+}
+
+.facebook, .google-plus, .linkedin, .twitter {
+  color: white;
+}
+.btn.facebook, .btn.google-plus, .btn.linkedin, .btn.twitter {
+  text-transform: none;
+  color: white;
+}
+.btn.sharepoint {
+  text-transform: none;
+}
+.btn.facebook:hover {
+  background-color: #2d4373;
+}
+.btn.google-plus:hover {
+  background-color: #c23321;
+}
+.btn.linkedin:hover {
+  background-color: #005582;
+}
+.btn.twitter:hover {
+  background-color: #2795e9;
 }

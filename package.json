@@ -1,0 +1,41 @@
+{
+  "name": "harrier-blue.com",
+  "version": "1.0.0",
+  "description": "Web application for Harrier Blue",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nbockoven/harrier-blue.git"
+  },
+  "author": "Nathaniel Bockoven",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nbockoven/harrier-blue/issues"
+  },
+  "homepage": "https://github.com/nbockoven/harrier-blue",
+  "dependencies": {
+    "algoliasearch": "^3.3.2",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.12.3",
+    "bower": "^1.4.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.3.4",
+    "ejs": "^2.3.1",
+    "express": "^4.12.3",
+    "express-session": "^1.11.1",
+    "grunt-cli": "^0.1.13",
+    "method-override": "^2.3.2",
+    "mongoose": "^4.0.2",
+    "morgan": "^1.5.2",
+    "node-mysql": "^0.4.2",
+    "passport": "^0.2.1",
+    "passport-facebook": "^2.0.0",
+    "passport-google-oauth": "^0.2.0",
+    "passport-linkedin": "^0.1.3",
+    "passport-local": "^1.0.0",
+    "passport-twitter": "^1.0.3"
+  }
+}

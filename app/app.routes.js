@@ -1,7 +1,7 @@
 harrierblue.config(function($stateProvider, $urlRouterProvider) {
 
   // For any unmatched url, redirect to /state1
-  $urlRouterProvider.otherwise("/welcome");
+  $urlRouterProvider.otherwise("/");
 
   // Now set up the states
   $stateProvider
@@ -52,21 +52,21 @@ harrierblue.config(function($stateProvider, $urlRouterProvider) {
     }
   })
 
-  .state('login', {
-    url: "/login",
-    controller: 'login',
-    templateUrl: "app/components/login/view.html",
+  .state('sign-in', {
+    url: "/sign-in",
+    controller: 'signIn',
+    templateUrl: "app/components/sign-in/view.html",
     data: {
-      pagetitle: 'Login'
+      pagetitle: 'Sign In'
     }
   })
 
-  .state('logout', {
-    url: "/logout",
-    controller: 'logout',
-    templateUrl: "app/components/logout/view.html",
+  .state('sign-out', {
+    url: "/sign-out",
+    controller: 'signOut',
+    templateUrl: "app/components/sign-out/view.html",
     data: {
-      pagetitle: 'Logout',
+      pagetitle: 'Sign Out',
       // requireLogin: true
     }
   })
